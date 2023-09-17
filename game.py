@@ -8,26 +8,26 @@
 """
 import random
 
-low, high = 1, 50
+low, high = 1, 100
 x = random.randint(low, high)
-
+nums = 10
 # print(x)
-
-for i in range(5):
-    y = eval(input(f"請輸入一個數字{low}~{high}:"))
+count = 0
+for i in range(10):
+    y = eval(input(f"{count+1}/{nums} 請輸入一個數字{low}~{high}:"))
     if y == x:
         print("恭喜答對")
         break
-        else:
+    else:
+        if y > x:
             print("猜高一點")
-
             if y < high:
                 high = y - 1
         else:
             print("猜高一點")
             if y > low:
                 low = y + 1
->>>>>>> test
+    count += 1
 
 if y != x:
     print(f"答案為:{x}")
