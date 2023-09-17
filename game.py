@@ -11,14 +11,25 @@ import random
 low, high = 1, 50
 x = random.randint(low, high)
 
-print(x)
+# print(x)
 
-y = eval(input(f"請輸入一個數字{low}~{high}:"))
+for i in range(5):
+    y = eval(input(f"請輸入一個數字{low}~{high}:"))
+    if y == x:
+        print("恭喜答對")
+        break
+    else:
+        if y > x:
+            print("猜低一點")
+            if y < high:
+                high = y - 1
+        else:
+            print("猜高一點")
+            if y > low:
+                low = y + 1
 
-if y == x:
-    print("恭喜答對")
-else:
-    print("答錯")
+if y != x:
+    print(f"答案為:{x}")
 
 
 # 驗證是否包含最大數字
