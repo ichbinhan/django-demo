@@ -21,7 +21,7 @@ else:
     print("答錯")
 
 
-# 驗證最大數字是否包含
+# 驗證是否包含最大數字
 """
 while True:
     x = random.randint(low, high)
